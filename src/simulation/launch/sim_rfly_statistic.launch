@@ -1,0 +1,4 @@
+<launch>
+    <node name="img_pub" pkg="simulation" type="img_pub.py" />
+    <node name="main_node" pkg="offboard_pkg" type="obs_statistic.py" output="screen" />
+</launch>

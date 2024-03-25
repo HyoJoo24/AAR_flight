@@ -1,0 +1,6 @@
+<launch>
+    <node name="img_pub" pkg="simulation" type="img_pub.py" />
+    <node name="ekf_node" pkg="ekf_pkg" type="ekf_node" respawn ="true"/>
+    <node name="main_node" pkg="offboard_pkg" type="obs_high.py" output="screen" />
+    <node pkg="rosbag" type="record" name="bag_record" args="-a -o $(find simulation)/bag/sim_high"/>
+</launch>
